@@ -1,0 +1,84 @@
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;">
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">General configuration</span>
+        <div style="margin: 8px 0;">
+		
+			<label class="flex-align-center" style="margin-top:8px; margin-left: 15px;font-size:14px;">
+                <input type="number" class="" min="0.1" style="margin-right:8px;" ng-model="config.gaugeMaximum2">Interval 1 ( I1 )<br />
+            </label>
+			<label class="flex-align-center" style="margin-top:8px; margin-left: 15px;font-size:14px;">
+				<input type="number" class="" min="0.1" style="margin-right:8px;" ng-model="config.gaugeMaximum3">Interval 2 ( I2 )<br />
+            </label>
+			<label class="flex-align-center" style="margin-top:8px; margin-left: 15px;font-size:14px;">
+                <input type="number" class="" min="0.1" style="margin-right:8px;" ng-model="config.gaugeAngle">Maximum Value ( Mv )<br />
+            </label>
+			<label class="flex-align-center" style="margin-top:8px; margin-left: 15px;font-size:14px;">
+                <input type="number" class="" min="0.1" style="margin-right:8px;" ng-model="config.gaugeInterval">Interval<br />
+            </label>
+            
+        </div>
+    </li>
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Visualize</span>
+
+        <div style="margin: 8px 0;">
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.showValue">Show value<br />
+            </label>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.showTitle">Show title<br />
+            </label> 
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.useCustomTitle">Custom title<br />
+
+            </label>
+            <label style="margin-top:8px; margin-left: 20px;font-size:14px;" ng-show="config.useCustomTitle">
+                <br />
+                <input type="text" class="" style="text-align:center;margin-left:10px;" ng-model="config.customTitle">
+                <br />
+            </label>
+			<div class="config-option-format">
+                <pv-color-picker id="textColor" ng-model="config.textColor" config="config" colorkeyword="Text Color">
+                </pv-color-picker>
+            </div>
+			
+			<div class="config-option-format">
+                <pv-color-picker id="textColor2" ng-model="config.textColorValue" config="config" colorkeyword="Value Color">
+                </pv-color-picker>
+            </div>
+			
+			<div class="config-option-format">
+                <pv-color-picker id="textColor3" ng-model="config.textColorArrows" config="config" colorkeyword="Arrows Color">
+                </pv-color-picker>
+            </div>
+        </div>
+    </li>
+	
+    <li>
+        <span class="panel-bar-label-no-wrap">Color</span>
+        <div style="margin: 8px 0;">
+		
+            <div class="config-option-format">
+                <pv-color-picker id="gaugeZone1Color" ng-model="config.gaugeZone1Color" config="config" colorkeyword="Fund">
+                </pv-color-picker>
+            </div>
+			                       
+            <div class="config-option-format">
+                <pv-color-picker id="gaugeZone2Color" ng-model="config.gaugeZone2Color" config="config" colorkeyword="Level 1 ( 0 -> I1 )">
+                </pv-color-picker>
+            </div>
+			
+			<div class="config-option-format">
+                <pv-color-picker id="gaugeZone3Color" ng-model="config.gaugeZone3Color" config="config" colorkeyword="Level 2 ( I1 -> I2 )">
+                </pv-color-picker> 
+            </div>
+			
+			<div class="config-option-format">
+                <pv-color-picker id="gaugeZone4Color" ng-model="config.gaugeZone4Color" config="config" colorkeyword="Level 3 ( I2 ->Mv)">
+                </pv-color-picker>
+            </div>
+            
+
+        </div>
+    </li>
+</ul>
